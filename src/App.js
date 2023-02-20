@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import { List } from "./components/List";
+import { Main } from "./components/Main";
 import { getData } from "./services/data";
 
 export function App() {
@@ -12,7 +13,7 @@ export function App() {
 
   return (
     <div className="App">
-      <List list={data?.results} />
+      <Main title={"Lista"} list={data?.results}/>
     </div>
   );
 }

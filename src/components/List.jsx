@@ -1,13 +1,10 @@
-import { useEffect } from "react";
+import "../styles/list.css";
 
 export const List = ({ list }) => {
-  useEffect(() => {
-    console.log(list);
-  }, []);
   return (
     <>
       <ul>
-        {list.map((item) => (
+        {list?.map((item) => (
           <li key={item.id}>{item.name}</li>
         ))}
       </ul>
