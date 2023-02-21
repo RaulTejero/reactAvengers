@@ -1,0 +1,41 @@
+.characters {
+  padding-top: 10em;
+  max-width: 500px;
+  margin: auto;
+}
+
+.characters-section {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.characters-section-card {
+  max-width: 150px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.characters-section-card-name {
+  font-size: 12px;
+  margin: -30px auto auto auto;
+  font-weight: 700;
+  color: white;
+  background-color: red;
+  width: max-content;
+  padding: 0 2px;
+}
+
+.characters-section-card-img {
+  max-width: 150px;
+  width: 200px;
+  height: 300px;
+  padding: 30px 5px 0 5px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+.characters-section-card-img:hover {
+  transform: scale(1.1);
+}

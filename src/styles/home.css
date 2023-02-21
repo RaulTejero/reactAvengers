@@ -1,10 +1,12 @@
 .home {
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-color: rgb(43, 43, 43);
   transition: all;
   padding-top: 5em;
+  min-height: 100vh;
 }
 
 .home-section {

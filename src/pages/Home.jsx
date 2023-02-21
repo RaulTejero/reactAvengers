@@ -22,7 +22,7 @@ export const Home = () => {
       style={
         characters
           ? {
-              backgroundImage: `url(${characters[10].thumbnail.path}.${`jpg`})`,
+              backgroundImage: `url(${characters[10].thumbnail.path}.${'jpg'})`,
             }
           : null
       }

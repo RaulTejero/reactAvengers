@@ -10,15 +10,13 @@ export const Nav = () => {
   return (
     <nav>
       <ul>
-        <BrowserRouter>
-          {navValues.map((item) => (
-            <Link key={item.id} to={item.path}>
-              <li className="nav" key={item.id}>
-                {item.value.toUpperCase()}
-              </li>
-            </Link>
-          ))}
-        </BrowserRouter>
+        {navValues.map((item) => (
+          <Link key={item.id} to={item.path}>
+            <li className="nav" key={item.id}>
+              {item.value.toUpperCase()}
+            </li>
+          </Link>
+        ))}
       </ul>
     </nav>
   );

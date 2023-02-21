@@ -1,0 +1,25 @@
+.character-detail {
+  padding-top: 7em;
+}
+.character-detail-section {
+  max-width: 500px;
+  margin: 5em auto auto;
+  display: flex;
+}
+
+.character-detail-section-img {
+  max-width: 70%;
+}
+
+.character-detail-section-info {
+   margin-left: 10px;
+}
+
+.character-detail-section-info-name {
+    margin-bottom: 20px;
+    max-width: fit-content;
+    color: white;
+    background-color: red;
+    padding: 0 2px;
+    font-weight: 800;
+}
