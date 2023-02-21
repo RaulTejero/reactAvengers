@@ -8,7 +8,6 @@ export const CharacterDetail = () => {
   const id = useParams().id;
 
   useEffect(() => {
-    console.log(id);
     getCharacterDetail(
       `https://gateway.marvel.com:443/v1/public/characters/${id}?apikey=68ba298b201d8e49464efa89de99047a`
     ).then((data) => {
@@ -30,7 +29,7 @@ export const CharacterDetail = () => {
               {character.name}
             </p>
             <p className="character-detail-section-info-description">
-              Descripción:  
+              Descripción:
               {character.description !== ""
                 ? ` ${character.description}`
                 : " No existe"}

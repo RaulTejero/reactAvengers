@@ -10,9 +10,6 @@ export const Character = () => {
     getCharacters(
       "https://gateway.marvel.com:443/v1/public/characters?apikey=68ba298b201d8e49464efa89de99047a"
     ).then((data) => setCharacters(data.data.results));
-    setTimeout(() => {
-      console.log(characters);
-    }, 1000);
   }, []);
 
   return (
@@ -22,13 +19,13 @@ export const Character = () => {
           ? characters.map((el) => (
               <div className="characters-section-card" key={el.id}>
                 <Link to={`/characters/${el.id}`}>
-                <div
-                  className="characters-section-card-img"
-                  style={{
-                    backgroundImage: `url(${el.thumbnail.path}.${"jpg"})`,
-                  }}
-                ></div>
-              </Link>
+                  <div
+                    className="characters-section-card-img"
+                    style={{
+                      backgroundImage: `url(${el.thumbnail.path}.${"jpg"})`,
+                    }}
+                  ></div>
+                </Link>
                 <p className="characters-section-card-name">{el.name}</p>
               </div>
             ))
