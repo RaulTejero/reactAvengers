@@ -1,0 +1,52 @@
+.home {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(43, 43, 43);
+  transition: all;
+  padding-top: 5em;
+}
+
+.home-section {
+  max-width: 500px;
+  margin: 5em auto auto;
+}
+
+.home-section-comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.home-section-comics img {
+  padding: 1em;
+  color: white;
+  max-width: 150px;
+}
+.home-section-comics p {
+  font-weight: 600;
+  font-size: 10px;
+  color: white;
+  margin-bottom: 2em;
+}
+
+.home-section-characters {
+  padding: 1em;
+  display: flex;
+}
+
+.home-section-characters img {
+  width: 0;
+  height: 200px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 1s all;
+}
+
+.home-section-characters img:hover {
+  cursor: crosshair;
+  opacity: 1;
+  width: 250px;
+  filter: contrast(120%);
+}

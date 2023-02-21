@@ -1,5 +1,11 @@
-export const getData = () => {
-  return fetch("https://rickandmortyapi.com/api/character")
-    .then((data) => data.json())
-    .then((result) => result);
+export const getCharacters = (url) => {
+  return fetch(url)
+    .then((response) => response.json())
+    .then((result) =>result);
+};
+
+export const getComics = (url) => {
+  return fetch(url)
+    .then((response) => response.json())
+    .then((result) =>result);
 };

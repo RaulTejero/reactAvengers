@@ -1,19 +1,24 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { List } from "./components/List";
-import { Main } from "./components/Main";
-import { getData } from "./services/data";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+
+import { Header } from "./components/Header";
+import { Home } from "./pages/Home";
+import { Character } from "./pages/Character";
+import { Comics } from "./pages/Comics";
 
 export function App() {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    getData().then((data) => setData(data));
-  }, []);
-
   return (
     <div className="App">
-      <Main title={"Lista"} list={data?.results}/>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<Navigate to={"/inicio"} />} />
+          <Route path="/" element={<Navigate to={"/inicio"} />} />
+          <Route path="/inicio" element={<Home />} />
+          <Route path="/characters" element={<Character />} />
+          <Route path="/comics" element={<Comics />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
