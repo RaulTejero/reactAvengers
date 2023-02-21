@@ -8,11 +8,11 @@ export const Home = () => {
 
   useEffect(() => {
     getCharacters(
-      "https://gateway.marvel.com:443/v1/public/characters?apikey=68ba298b201d8e49464efa89de99047a"
+      `https://gateway.marvel.com:443/v1/public/characters?apikey=${process.env.REACT_APP_API_KEY_MARVEL}`
     ).then((data) => setCharacters(data.data.results));
 
     getComics(
-      "https://gateway.marvel.com:443/v1/public/comics?apikey=68ba298b201d8e49464efa89de99047a"
+      `https://gateway.marvel.com:443/v1/public/comics?apikey=${process.env.REACT_APP_API_KEY_MARVEL}`
     ).then((data) => setComics(data.data.results));
   }, []);
 

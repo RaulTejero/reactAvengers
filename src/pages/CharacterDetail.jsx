@@ -8,8 +8,9 @@ export const CharacterDetail = () => {
   const id = useParams().id;
 
   useEffect(() => {
+    console.log(process.env.REACT_APP_API_KEY_MARVEL);
     getCharacterDetail(
-      `https://gateway.marvel.com:443/v1/public/characters/${id}?apikey=68ba298b201d8e49464efa89de99047a`
+      `https://gateway.marvel.com:443/v1/public/characters/${id}?apikey=${process.env.REACT_APP_API_KEY_MARVEL}`
     ).then((data) => {
       setCharacter(data.data.results[0]);
     });
